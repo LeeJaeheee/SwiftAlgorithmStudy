@@ -18,7 +18,7 @@ func solution(_ m:Int, _ n:Int, _ board:[String]) -> Int {
                 if j == nb.count-1 || j >= newBoard[i+1].count-1 {
                     break
                 }
-                let match = Array(Set([newBoard[i][j], newBoard[i][j+1], newBoard[i+1][j], newBoard[i+1][j+1]]))
+                let match = Set([newBoard[i][j], newBoard[i][j+1], newBoard[i+1][j], newBoard[i+1][j+1]])
                 if match.count == 1 {
                     matched += 1
                     nextBoard[i][j] = "0"   
